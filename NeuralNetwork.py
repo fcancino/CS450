@@ -114,7 +114,13 @@ class NeuralNetwork:
 
 
     def predict(self):
-      pass
+        for prediction in self.array_of_predictions:
+            if prediction == 0:
+                print("Setosa")
+            elif prediction == 1:
+                print("Virginica")
+            else:
+                print("Rubinica")
     def calc_percentage(self):
 
         sum = 0
@@ -133,5 +139,6 @@ class NeuralNetwork:
 
 neuralNetwork = NeuralNetwork(3, 4)
 neuralNetwork.train()
+neuralNetwork.predict()
 print(neuralNetwork.calc_percentage())
 
